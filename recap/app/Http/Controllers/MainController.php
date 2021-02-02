@@ -29,6 +29,8 @@ class MainController extends Controller
         $newPeripheral -> model = $request -> get('model');
         $newPeripheral -> price = $request -> get('price');
         $newPeripheral -> consumption = $request -> get('consumption');
+
+        $newPeripheral -> save();
         return redirect() -> route('peripherals-index');
     }
 }
