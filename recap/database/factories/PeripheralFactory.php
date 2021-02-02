@@ -9,7 +9,7 @@ $factory->define(Peripheral::class, function (Faker $faker) {
     return [
         'name' => $faker -> word(),
         'model' => $faker -> ean13(),
-        'price' => rand(),
+        'price' => rand(20, 50),
         'consumption' => rand(20, 50)
     ];
 });

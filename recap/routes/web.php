@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'MainController@index') -> name('peripherals-index');
+Route::get('/peripheral/{id}', 'MainController@show') -> name('peripherals-show');
+Route::get('/new/peripheral', 'MainController@create') -> name('peripheral-create');
+Route::post('/new/peripheral/store', 'MainController@store') -> name('peripheral-store');
